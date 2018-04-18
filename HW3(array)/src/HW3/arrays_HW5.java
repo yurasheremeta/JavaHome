@@ -15,7 +15,7 @@ public class arrays_HW5 {
 			sum1=(double)arr[i]/arr.length;
 		
 		}
-		System.out.println("Середнє "+sum1);
+		System.out.println(" Середнє "+sum1);
 		System.out.println(" ");
 		int[] arr2 = new int[5];
 		for (int i = 0; i < arr2.length; i++) {
@@ -24,13 +24,13 @@ public class arrays_HW5 {
 			sum2+=(double)arr[i]/arr.length;
 		
 		}
-		System.out.println("Середнє"+ sum2);
+		System.out.println(" Середнє"+ sum2);
 		if(sum1>sum2){
 			System.out.println("Середнє арифметичне першого масиву більше");
 		}else if(sum1<sum2){
 			System.out.println("Середнє арифметичне другого масиву більше");
 		}else{
-			System.out.println("Середнє двої масивів рівні");
+			System.out.println("Середнє двох масивів рівні");
 		}
 	}
 

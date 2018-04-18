@@ -19,7 +19,7 @@ public class arrays_HM9 {
 		System.out.println(" ");
 		double[] arr3 = new double[10];
 		for (int i = 0; i < arr3.length; i++) {
-			arr3[i] = 1+rand.nextInt(10);
+			arr3[i] = 1+rand.nextDouble();
 			System.out.print(arr3[i]+" ");
 		
 		}
