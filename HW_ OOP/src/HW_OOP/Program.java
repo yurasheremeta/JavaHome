@@ -12,6 +12,8 @@ public class Program {
 		int width = scan.nextInt();
 		Rectangle rectangle = new Rectangle(length , width);
 		rectangle.Draw();
+		
+	
 		System.out.println("Square: " + rectangle.Square());
 		System.out.println("Perimeter: " + rectangle.Perimeter());
 		
