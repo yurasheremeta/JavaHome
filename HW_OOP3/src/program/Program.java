@@ -16,15 +16,11 @@ public class Program {
 		System.out.println("Enter width: ");
 		rectangle.setWidth(scan.nextInt());
 		rectangle.Output_Rect();
-//		rectangle.Square();
-//		rectangle.Perimeter();
 		
 		System.out.println("Enter side: ");
 		quadrate.setSide(scan.nextInt());
 		quadrate.Output_Quadrate();
-//		quadrate.Perimeter_Quadrate();
-//		quadrate.Square_Quadrate();
-		
+
 		
 	}
 
