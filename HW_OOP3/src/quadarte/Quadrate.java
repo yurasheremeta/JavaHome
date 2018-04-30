@@ -3,19 +3,21 @@ package quadarte;
 import rectangle.Rectangle;
 
 public class Quadrate extends Rectangle {
-	protected int side;
+	protected double side;
 	
 	public Quadrate (){
 		
 	}
 
-	public Quadrate(double perimeter, double square, int length, int width , int side) {
-		super(perimeter, square, length, width);
+	public Quadrate(double side) {
+	
 		this.side = side;
+		this.perimeter = side *4;
+		this.square = side*side;
 		
 	}
 
-	public int getSide() {
+	public double getSide() {
 		return side;
 	}
 
@@ -23,23 +25,12 @@ public class Quadrate extends Rectangle {
 		this.side = side;
 	}
 	
-	public void Perimeter_Quadrate(){
-		perimeter = side*4;
-		System.out.println("Perimeter of Quadrat is "+ perimeter);
-		System.out.println(" ");
-	}
-	public void Square_Quadrate(){
-		square = side*side;
-		System.out.println("Square for Quadrate is  "+ square);
-		System.out.println(" ");
-		
-	}
-	
+
 	public void Output_Quadrate (){
 		System.out.println("The side of Quadrat is "+ side);
-		System.out.println(" ");
-		Perimeter_Quadrate();
-		Square_Quadrate();
+		System.out.println("Perimeter is "+perimeter);
+		System.out.println("Square is "+ square);
+		
 	}
 	
 
