@@ -27,7 +27,7 @@ public class Wheel {
 	}
 	
 	public void wheel(){
-		System.out.println("You have "+diameter+" diameter wheels");
+		System.out.println("You have "+diameter+" inch wheels");
 	}
 	
 

@@ -15,6 +15,7 @@ public class Program {
 		car.side();
 		car.color();
 		car.wheel();
+		System.out.println(car);
 	}
 
 }
