@@ -25,7 +25,9 @@ public class Body {
 	public String toString() {
 		return "Body [color=" + color + ", body=" + body + "]";
 	}
-	
+	public void color(){
+		System.out.println("Your car is " + color);
+	}
 	
 	
 

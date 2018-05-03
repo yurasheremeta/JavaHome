@@ -13,6 +13,8 @@ public class Program {
 		car.getHelm().setSide("Right");
 		System.out.println(car);
 		car.side();
+		car.color();
+		car.wheel();
 	}
 
 }

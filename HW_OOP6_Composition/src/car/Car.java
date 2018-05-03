@@ -45,4 +45,10 @@ public class Car {
 		helm.side();
 	
 	}
+	public void color(){
+		body.color();
+	}
+	public void wheel(){
+		wheel.wheel();
+	}
 }

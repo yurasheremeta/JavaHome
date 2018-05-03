@@ -26,7 +26,9 @@ public class Wheel {
 		return "Wheel [diameter=" + diameter + ", name=" + name + "]";
 	}
 	
-	
+	public void wheel(){
+		System.out.println("You have "+diameter+" diameter wheels");
+	}
 	
 
 }
