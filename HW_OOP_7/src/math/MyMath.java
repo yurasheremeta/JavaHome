@@ -5,7 +5,7 @@ import java.util.Scanner;
 public  class MyMath {
 	public final static double pi = 3.141592;
 	public final double e = 2.71828;
-	public final static int ñ = 299792458;
+	public final static long ñ = 299792458;
 	
 	public static void Circle(){
 		Scanner scan = new Scanner(System.in);
