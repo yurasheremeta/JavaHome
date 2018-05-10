@@ -25,5 +25,10 @@ public class Mine implements Building {
 		player.addGold(EFFICIENCY * lvl);
 		
 	}
+	public void upgrade(){
+		lvl +=lvl;
+		System.out.println("Yor level now: "+ lvl);
+	
+	}
 
 }

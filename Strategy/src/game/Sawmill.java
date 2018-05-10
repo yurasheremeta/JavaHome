@@ -25,5 +25,9 @@ public class Sawmill implements Building {
 		player.addTree(EFFICIENCY * lvl);
 		
 	}
+	public void upgrade(){
+		lvl += lvl;
+		System.out.println("Your level is: "+lvl);
+	}
 
 }

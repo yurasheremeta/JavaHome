@@ -19,6 +19,7 @@ public class Program {
 				activateBuilding(); 
 				break;
 			case "3":
+				upgradeToLvl();
 				break;
 				default :
 					System.out.println("Goodbay");
@@ -32,7 +33,7 @@ public class Program {
 	public static void initGame(){
 		scan= new Scanner(System.in);
 		System.out.println("Welcome!");
-		System.out.println("Enter your nickname: ");
+		System.out.print("Enter your nickname: ");
 		player = new Player(scan.next());
 	}
 	
@@ -82,7 +83,7 @@ public class Program {
 	//Додати дерево і методи і білдінг
 	public static void activateBuilding(){
 		printListBuildings();
-		System.out.println("Enter index  - ");
+		System.out.print("Enter index  - ");
 		int i = scan.nextInt();
 		Building[] b = player.getBuildings();
 		if(i >= 0 && i<b.length && b[i] != null){
@@ -90,6 +91,18 @@ public class Program {
 			
 		}else{
 			System.out.println("Try one more time");
+		}
+	}
+	public static void upgradeToLvl(){
+		printListBuildings();
+		System.out.println("Upgrade cost 10g");
+		System.out.print("Enter index - ");
+		int i = scan.nextInt();
+		Building[] b = player.getBuildings();
+		if(i >= 0 && i<b.length && b[i] != null && player.takeGold(10)){
+			System.out.println("You upgrade your "+b[i]);
+			b[i].upgrade();
+		
 		}
 	}
 }
