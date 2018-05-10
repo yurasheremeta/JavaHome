@@ -26,7 +26,7 @@ public class Mine implements Building {
 		
 	}
 	public void upgrade(){
-		lvl +=lvl;
+		lvl+=1;
 		System.out.println("Yor level now: "+ lvl);
 	
 	}

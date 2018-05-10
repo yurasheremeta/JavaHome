@@ -26,7 +26,7 @@ public class Sawmill implements Building {
 		
 	}
 	public void upgrade(){
-		lvl += lvl;
+		lvl += 1;
 		System.out.println("Your level is: "+lvl);
 	}
 
