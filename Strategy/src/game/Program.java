@@ -38,6 +38,7 @@ public class Program {
 	
 	public static void printMenu(){
 		System.out.println("g = "+player.getGold());
+		System.out.println("t = "+player.getTree());
 		System.out.println("1 - add Building");
 		System.out.println("2 - activate building ");
 		System.out.println("3 - upgrade building");
@@ -47,6 +48,8 @@ public class Program {
 	
 	public static void addBuilding(){
 		System.out.println("1 - mine("+Mine.COST+" g)");
+		System.out.println("2 - sawmil("+Sawmill.COST+"g)");
+		
 		String choise = scan.next();
 		switch(choise){
 		case "1":
@@ -57,6 +60,13 @@ public class Program {
 				System.out.println("You do not have enough gold");
 			}
 			break;
+		case "2":
+			if(player.takeGold(Sawmill.COST)){
+				player.addBuildings(new Sawmill(player));
+				System.out.println("Sawmill created");
+			}else{
+				System.out.println("You do not have enough gold");
+			}
 			default:
 				System.out.println("There is not such option");
 		}
@@ -69,7 +79,7 @@ public class Program {
 			}
 		}
 	}
-	
+	//Додати дерево і методи і білдінг
 	public static void activateBuilding(){
 		printListBuildings();
 		System.out.println("Enter index  - ");
@@ -77,6 +87,7 @@ public class Program {
 		Building[] b = player.getBuildings();
 		if(i >= 0 && i<b.length && b[i] != null){
 			b[i].activate();
+			
 		}else{
 			System.out.println("Try one more time");
 		}
