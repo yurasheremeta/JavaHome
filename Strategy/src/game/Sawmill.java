@@ -2,6 +2,7 @@ package game;
 
 public class Sawmill implements Building {
 	public static final int COST = 20;
+	public static final int COSTWORKER = 15;
 	private final int EFFICIENCY = 2;
 	private Player player;
 	private int health;

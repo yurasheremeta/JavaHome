@@ -1,7 +1,7 @@
 package game;
 
 public interface GameUnit {
-	void setHealth(int brearhe);
+	void setHealth(int breathe);
 	int getHealth();
 	
 	

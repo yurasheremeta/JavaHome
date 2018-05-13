@@ -2,6 +2,7 @@ package game;
 
 public class Mine implements Building {
 	public static final int COST = 60;
+	public static final int COSTWORKER = 15;
 	public static final int EFFICIENCY = 10;
 	private int health;
 	private Player player;

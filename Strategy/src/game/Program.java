@@ -21,6 +21,9 @@ public class Program {
 			case "3":
 				upgradeToLvl();
 				break;
+			case "4":
+				addWorker();
+				break;
 				default :
 					System.out.println("Goodbay");
 					return;
@@ -40,9 +43,11 @@ public class Program {
 	public static void printMenu(){
 		System.out.println("g = "+player.getGold());
 		System.out.println("t = "+player.getTree());
+		System.out.println("w = "+player.getWorker());
 		System.out.println("1 - add Building");
 		System.out.println("2 - activate building ");
 		System.out.println("3 - upgrade building");
+		System.out.println("4 - add worker");
 		
 		System.out.println("other - exit");
 	}
@@ -70,6 +75,37 @@ public class Program {
 			}
 			default:
 				System.out.println("There is not such option");
+		}
+	}
+	public static void addWorker(){
+		System.out.println("1 - mine("+Mine.COSTWORKER+" g)");
+		System.out.println("2 - sawmil("+Sawmill.COSTWORKER+"g)");
+		System.out.print("Enter index - ");
+		String choice = scan.next();
+		
+//		int i = scan.nextInt();
+//		Worker[] w = player.getWorkers();
+//		if(i >= 0 && i<w.length && w[i] != null && player.takeGold(10)){
+//			//System.out.println("You upgrade your "+w[i]);
+//			w[i].Work();
+//		
+//		}
+		switch(choice){
+		case "1":
+			if(player.takeGold(Mine.COSTWORKER)){
+				player.addWorker(new MineWorker(player));
+				System.out.println("Worker added");
+			}else{
+				System.out.println("You do not have enough gold");
+			}
+		case "2":
+			if(player.takeGold(Sawmill.COSTWORKER)){
+				player.addWorker(new SawmillWorker(player));
+			
+				System.out.println("Worker added");
+			}else{
+				System.out.println("You do not have enough gold");
+			}
 		}
 	}
 	public static void printListBuildings(){
@@ -104,5 +140,9 @@ public class Program {
 			b[i].upgrade();
 		
 		}
+		
 	}
+//	public static void Work(){
+//		
+//	}
 }
